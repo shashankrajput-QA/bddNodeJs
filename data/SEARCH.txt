@@ -1,0 +1,35 @@
+--SEARCH ALERT---
+profile_GENERAL=Alisha Dunn
+profile_GENERAL_CLOSED_PARK_DONE=Hildegard Frieser
+profile_GENERAL_FALSEPOS_CONFIRM=Lindsey Craft
+profile_GENERAL_CAPS=ALISHA DUNN
+profile_GENERAL_small=alisha dunn
+profile_CustomerID1=15
+profile_CustomerID2=16
+profile_LINK_ALERT2= Steven Marshall
+
+profile_LINK_ALERT3=Rick O'neal
+
+--SEARCH CASE--
+profile_CASE_INVOLVED_PERSON=Hildegard Frieser
+profile_CASE_INVOLVED_PERSON_CUSTID=1
+OPEN_CASE_QUEUE=Active investigations
+profile_CASE_NO=caseReference
+profile_CASE_NO_PARTIAL=caseRe
+profile_CASE_TITLE=Sample Investigation Title
+profile_CASE_TITLE_PARTIAL=sample Investigation
+profile_CASE_DESC=Sample Investigation Description
+profile_CASE_DESC_PARTIAL=sample Investigation
+profile_CUST_SURNAME=Frieser
+profile_CUST_FIRSTNAME=Hildegard
+profile_CUST_BIRTHDATE=01/01/2011
+profile_CUST_CUSTADV=Lieschen%
+profile_CUST_IBAN=DE2312328972837283
+profile_CUST_BUSINESSTYPE=BusinessType
+profile_CUST_BUSINESSNO=123
+profile_CUST_ACCOUNTBALSTART=0
+profile_CUST_ACCOUNTBALEND=100000
+profile_CUST_ACCOUNT_OPENED_FROM=01/01/2001
+profile_CUST_ACCOUNT_OPENED_TO=01/01/2017
+profile_CUST_CURRENCY=EUR
+profile_CUST_LINK=Greg Melton

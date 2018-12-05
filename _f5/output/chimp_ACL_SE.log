@@ -1,0 +1,364 @@
+
+C:\ACM_QA>REM node chimp/dist/bin/chimp.js _f5/runtime/run.feature 
+
+C:\ACM_QA>if "chrome" == "firefox" (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_ACM\ACL-SE.feature --browser="firefox" --port=4444 --host="localhost" )  else if "chrome" == "ie" (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_ACM\ACL-SE.feature --browser="internet explorer" --port=4444 --host="localhost" )  else (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_ACM\ACL-SE.feature ) 
+[32m
+Master Chimp and become a testing Ninja! Check out our course: [39m[4m[34mhttp://bit.ly/2btQaFu
+[39m[24m
+[33m
+[chimp] Running...[39m
+Feature: SINGLE TASK TEMPLATE: ADD, UPDATE
+
+  [36m@watch[39m
+  Scenario: PREREQ: ACM LOGIN
+  [32m√ Then I delete Cookies[39m
+fileName / key is .\\data\\ACM.txt / url
+value is http://localhost:8181/acm/
+  [32m√ Given I open url "<--.\\data\\ACM.txt/url"[39m
+  [32m√ Then I wait for "8000"[39m
+//descendant::a[contains(.,"Home")][1]
+  [32m√ Then I click on "Home"[39m
+(//button[contains(.,"Page 1")])[1]
+  [32m√ Then I click button "Page 1"[39m
+//descendant::*[contains(text(),"Items per page")][1]/following::select[1]
+  [32m√ When I select from "Items per page" as "50"[39m
+  [32m√ Then I wait for "2000"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE
+value is Alisha Dunn
+//descendant::a[contains(.,"Alisha Dunn")][1]
+  [32m√ When I click on "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+  [32m√ Then I wait for "3000"[39m
+(//descendant::*[text()="Open"])[last()]/preceding::*[@type = 'checkbox'][1]
+To Check
+  [32m√ When I "check" the checkbox present "before" the "Open""[last()]"[39m
+(//button[contains(text(),"Create case")])[1]
+  [32m√ When I click button "Create case"[39m
+//*[contains(text(),"New Case")]
+  [32m√ Then I click on "New Case" button[39m
+  [32m√ Then I wait for "3000"[39m
+(//descendant::*[contains(text(),"Name")])[1]/following::input[1]
+  [32m√ Then I enter "Name" as "$$rndString"[39m
+(//descendant::*[contains(text(),"Case ID")])[1]/following::input[1]
+  [32m√ Then I enter "Case ID" as "$$rndString"[39m
+//descendant::*[contains(text(),'Description')][1]/following::textarea[1]
+  [32m√ Then I enter multiline text in "Description" as "Automation testing"[39m
+//descendant::*[contains(text(),"Assignee")][1]/following::select[1]
+  [32m√ When I select from "Assignee" as "Super Users"[39m
+//descendant::*[contains(text(),"Owner")][1]/following::select[1]
+  [32m√ When I select from "Owner" as "John Smith"[39m
+(//descendant::*[contains(text(),"Mark as main person")])/following::input[1]
+  [32m√ Then I click "Mark as main person" field"[1]"[39m
+//descendant::*[contains(text(),"Role")][1]/following::select[1]
+  [32m√ When I select from "Role" as "Suspect"[39m
+  [32m√ Then I wait for "3000"[39m
+//descendant::*[text()='New comment'][2]/following::textarea[1]
+  [32m√ Then I enter multiline text in "New comment" occurrence of "[2]" as "Automation Testing"[39m
+(//descendant::*[contains(text(),"Save and edit case")])[1]
+  [32m√ Then I click on "Save and edit case"[39m
+  [32m√ Then I wait for "6000"[39m
+//a//*[contains(text(),"SAR")][1]
+  [32m√ Then I click on "SAR"[39m
+(//button[contains(.,"New SAR")])[1]
+  [32m√ When I click button "New SAR"[39m
+//descendant::*[contains(text(),'Internal comment')][1]/following::textarea[1]
+  [32m√ Then I enter multiline text in "Internal comment" as "Automation Test: SAR to be sent to Legal"[39m
+//descendant::*[contains(text(),'SAR text')][1]/following::textarea[1]
+  [32m√ Then I enter multiline text in "SAR text" as "Automation Test: Serious Suspicion"[39m
+//descendant::*[text()="Please select..."][1]
+  [32m√ When I click on "Please select..."[39m
+(//descendant::*[contains(text(),"German SAR")])[1]
+  [32m√ When I click on "German SAR"[39m
+  [32m√ Then I wait for "1000"[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ When I click button "Save"[39m
+  [32m√ Then I wait for "6000"[39m
+(//*[contains(text(),"SAR-2017")])[1]
+SAR-20170906-182505809 German SAR §11 GWG
+  [32m√ Then I verify the page text to contain "SAR-2017"[39m
+  [32m√ Then I wait for "5000"[39m
+//descendant::*[text()="Download"][1]
+  [32m√ Then I click on "Download"[39m
+  [32m√ Then I wait for "3000"[39m
+(//descendant::*[contains(text(),"Mark as submitted")])[1]
+  [31m× Then I click on "Mark as submitted"[39m
+  [36m- Then I wait for "2000"[39m
+  [36m- When I select from "SAR submitted via" value as "FAX"[39m
+  [36m- Then I enter "Date submitted to authority" as "$$sysdate"[39m
+  [36m- Then I enter multiline text in "Comment on submission" as "Automation: Should go to Legal ASAP"[39m
+  [36m- When I click button "Save"[39m
+  [36m- Then I wait for "4000"[39m
+  [36m- Then I verify the page text to contain "Submitted to authority"[39m
+  [36m- Then I click on "Home"[39m
+  [36m- Then I click button "Page 1"[39m
+  [36m- When I select from "Items per page" as "50"[39m
+  [36m- Then I wait for "2000"[39m
+  [36m- When I click on "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+  [36m- Then I wait for "3000"[39m
+  [36m- When I "check" the checkbox present "before" the "In progress""[last()]"[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- When I click button "Confirm"[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- When I click on "Select options"[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- Then I enter placeholder "Filter fields..." as "Suspicion has been substantiated"[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- When I "check" the checkbox present "after" the "Reason""[1]"[39m
+  [36m- When I click on "Use comment template"[39m
+  [36m- When I click on "Confirmed"[39m
+  [36m- When I select from "Customer relation (recommended)" as "Cancellation Ordered"[39m
+  [36m- When I click button "Save"[39m
+  [36m- Then I wait for "2000"[39m
+
+  [36m@watch[39m
+  Scenario: VERIFY isInvolvedInCase ACL ATTRIBUTE
+//descendant::a[contains(.,"Admin")][1]
+  [32m√ When I click on "Admin"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="Super Users"][1]
+  [32m√ Then I click on "Super Users"[39m
+  [32m√ Then I wait for "1000"[39m
+//a//*[contains(text(),"Suspicious Entity")][1]
+  [32m√ When I click on "Suspicious Entity"[39m
+  [32m√ Then I wait for "1000"[39m
+//*[contains(.," Enabled")]//preceding::*[contains(@*,"fico-icon-toggle")][1]
+  [32m√ Then I click "fico-icon-toggle" icon before the text " Enabled"[39m
+//*[text()="Add"]
+  [32m√ When I click on "Add" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity Case"]
+  [32m√ When I click on "S-Entity Case" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity statistics"]
+  [32m√ When I click on "S-Entity statistics" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity is involved in Case"]
+  [32m√ When I click on "S-Entity is involved in Case" button[39m
+  [32m√ Then I wait for "3000"[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ Then I verify button "Save" is enabled[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ When I click button "Save"[39m
+//descendant::a[contains(.,"Home")][1]
+  [32m√ Then I click on "Home"[39m
+(//button[contains(.,"Page 1")])[1]
+  [32m√ Then I click button "Page 1"[39m
+//descendant::*[contains(text(),"Items per page")][1]/following::select[1]
+  [32m√ When I select from "Items per page" as "50"[39m
+  [32m√ Then I wait for "2000"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE
+value is Alisha Dunn
+(//*[contains(text(),"Alisha Dunn")])[1]
+Alisha Dunn
+  [32m√ Then I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE_Unused
+value is Patrick Walker
+Text not found: Patrick Walker
+  [32m√ Then I verify the page text to not contain "<--.\\data\\ACL.txt/profile_ACL_SE_Unused"[39m
+
+  [36m@watch[39m
+  Scenario: VERIFY isMainInvolvedPerson ACL ATTRIBUTE
+//descendant::a[contains(.,"Admin")][1]
+  [32m√ When I click on "Admin"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="Super Users"][1]
+  [32m√ Then I click on "Super Users"[39m
+  [32m√ Then I wait for "1000"[39m
+//a//*[contains(text(),"Suspicious Entity")][1]
+  [32m√ When I click on "Suspicious Entity"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="S-Entity Case / S-Entity statistics / S-Entity is involved in Case"][1]
+  [32m√ When I click on "S-Entity Case / S-Entity statistics / S-Entity is involved in Case"[39m
+(//*[contains(text(),"S-Entity Case / S-Entity statistics / S-Entity is involved in Case")]//following::*[contains(@*,"fico-icon-trash")])[1]
+  [32m√ Then I click "fico-icon-trash" icon after the text "S-Entity Case / S-Entity statistics / S-Entity is involved in Case"[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="Add"]
+  [32m√ When I click on "Add" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity Case"]
+  [32m√ When I click on "S-Entity Case" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity statistics"]
+  [32m√ When I click on "S-Entity statistics" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity is main involved"]
+  [32m√ When I click on "S-Entity is main involved" button[39m
+  [32m√ Then I wait for "3000"[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ Then I verify button "Save" is enabled[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ When I click button "Save"[39m
+//descendant::a[contains(.,"Home")][1]
+  [32m√ Then I click on "Home"[39m
+(//button[contains(.,"Page 1")])[1]
+  [32m√ Then I click button "Page 1"[39m
+//descendant::*[contains(text(),"Items per page")][1]/following::select[1]
+  [32m√ When I select from "Items per page" as "50"[39m
+  [32m√ Then I wait for "2000"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE
+value is Alisha Dunn
+(//*[contains(text(),"Alisha Dunn")])[1]
+Alisha Dunn
+  [32m√ Then I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE_Unused
+value is Patrick Walker
+Text not found: Patrick Walker
+  [32m√ Then I verify the page text to not contain "<--.\\data\\ACL.txt/profile_ACL_SE_Unused"[39m
+
+  [36m@watch[39m
+  Scenario: VERIFY hasSubmittedSars ACL ATTRIBUTE
+//descendant::a[contains(.,"Admin")][1]
+  [32m√ When I click on "Admin"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="Super Users"][1]
+  [32m√ Then I click on "Super Users"[39m
+  [32m√ Then I wait for "1000"[39m
+//a//*[contains(text(),"Suspicious Entity")][1]
+  [32m√ When I click on "Suspicious Entity"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="S-Entity Case / S-Entity statistics / S-Entity is main involved"][1]
+  [32m√ When I click on "S-Entity Case / S-Entity statistics / S-Entity is main involved"[39m
+(//*[contains(text(),"S-Entity Case / S-Entity statistics / S-Entity is main involved")]//following::*[contains(@*,"fico-icon-trash")])[1]
+  [32m√ Then I click "fico-icon-trash" icon after the text "S-Entity Case / S-Entity statistics / S-Entity is main involved"[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="Add"]
+  [32m√ When I click on "Add" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity Case"]
+  [32m√ When I click on "S-Entity Case" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity statistics"]
+  [32m√ When I click on "S-Entity statistics" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity is reported to FIU"]
+  [32m√ When I click on "S-Entity is reported to FIU" button[39m
+  [32m√ Then I wait for "3000"[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ Then I verify button "Save" is enabled[39m
+(//button[contains(text(),"Save")])[1]
+  [32m√ When I click button "Save"[39m
+//descendant::a[contains(.,"Home")][1]
+  [32m√ Then I click on "Home"[39m
+(//button[contains(.,"Page 1")])[1]
+  [32m√ Then I click button "Page 1"[39m
+//descendant::*[contains(text(),"Items per page")][1]/following::select[1]
+  [32m√ When I select from "Items per page" as "50"[39m
+  [32m√ Then I wait for "2000"[39m
+fileName / key is .\\data\\ACL.txt / profile_ACL_SE
+value is Alisha Dunn
+(//*[contains(.,"Alisha Dunn")])
+  [31m× Then I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+  [36m- Then I verify the page text to not contain "<--.\\data\\ACL.txt/profile_ACL_SE_Unused"[39m
+
+  [36m@watch[39m
+  Scenario: VERIFY hasSubmittedSars ACL ATTRIBUTE
+//descendant::a[contains(.,"Admin")][1]
+  [32m√ When I click on "Admin"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="Super Users"][1]
+  [32m√ Then I click on "Super Users"[39m
+  [32m√ Then I wait for "1000"[39m
+//a//*[contains(text(),"Suspicious Entity")][1]
+  [32m√ When I click on "Suspicious Entity"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="S-Entity Case / S-Entity statistics / S-Entity is reported to FIU"][1]
+  [32m√ When I click on "S-Entity Case / S-Entity statistics / S-Entity is reported to FIU"[39m
+(//*[contains(text(),"S-Entity Case / S-Entity statistics / S-Entity is reported to FIU")]//following::*[contains(@*,"fico-icon-trash")])[1]
+  [32m√ Then I click "fico-icon-trash" icon after the text "S-Entity Case / S-Entity statistics / S-Entity is reported to FIU"[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="Add"]
+  [32m√ When I click on "Add" button[39m
+  [32m√ Then I wait for "1000"[39m
+//*[text()="S-Entity Case"]
+  [31m× When I click on "S-Entity Case" button[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- When I click on "S-Entity statistics" button[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- When I click on "S-Entity ACM Severity" button[39m
+  [36m- Then I wait for "1000"[39m
+  [36m- Then I enter "S-Entity Case / S-Entity statistics / S-Entity ACM Severity" as "2"[39m
+  [36m- Then I wait for "2000"[39m
+  [36m- Then I verify button "Save" is enabled[39m
+  [36m- When I click button "Save"[39m
+  [36m- Then I click on "Home"[39m
+  [36m- Then I click button "Page 1"[39m
+  [36m- When I select from "Items per page" as "50"[39m
+  [36m- Then I wait for "2000"[39m
+  [36m- Then I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+  [36m- Then I verify the page text to not contain "<--.\\data\\ACL.txt/profile_ACL_SE_Unused"[39m
+
+  [36m@watch[39m
+  Scenario: CLEANUP
+//descendant::a[contains(.,"Admin")][1]
+  [32m√ When I click on "Admin"[39m
+  [32m√ Then I wait for "1000"[39m
+//descendant::*[text()="Super Users"][1]
+  [32m√ Then I click on "Super Users"[39m
+  [32m√ Then I wait for "1000"[39m
+//a//*[contains(text(),"Suspicious Entity")][1]
+  [32m√ When I click on "Suspicious Entity"[39m
+  [32m√ Then I wait for "1000"[39m
+//*[contains(.," Enabled")]//preceding::*[contains(@*,"fico-icon-toggle")][1]
+  [32m√ Then I click "fico-icon-toggle" icon before the text " Enabled"[39m
+(//descendant::*[contains(text(),"S-Entity Case / S-Entity statistics / S-Entity ACM Severity")])[1]
+  [31m× When I click on "S-Entity Case / S-Entity statistics / S-Entity ACM Severity"[39m
+  [36m- Then I click "fico-icon-trash" icon after the text "S-Entity Case / S-Entity statistics / S-Entity ACM Severity"[39m
+  [36m- When I click button "Save"[39m
+  [36m- Then I click on "Home"[39m
+  [36m- Then I click button "Page 1"[39m
+  [36m- When I select from "Items per page" as "50"[39m
+  [36m- Then I wait for "2000"[39m
+  [36m- Then I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[39m
+  [36m- Then I verify the page text to not contain "<--.\\data\\ACL.txt/profile_ACL_SE_Unused"[39m
+
+[35mFailures:[39m
+[35m[39m
+[35m1) Scenario: [1mPREREQ: ACM LOGIN[22m - [90m_f5\_ACM\ACL-SE.feature:10[39m[39m
+[35m   Step: [1mThen I click on "Mark as submitted"[22m - [90m_f5\_ACM\ACL-SE.feature:55[39m[39m
+[35m   Step Definition: [90m_f5\testlib\Utils.js:860[39m[39m
+[35m   Message:[39m
+[33m     [31mError: An element could not be located on the page using the given search parameters.[39m
+[33m         at World.<anonymous> (C:/ACM_QA/_f5/testlib/Utils.js:873:11)[39m
+[35m[39m
+[35m2) Scenario: [1mVERIFY hasSubmittedSars ACL ATTRIBUTE[22m - [90m_f5\_ACM\ACL-SE.feature:160[39m[39m
+[35m   Step: [1mThen I verify the page text to contain "<--.\\data\\ACL.txt/profile_ACL_SE"[22m - [90m_f5\_ACM\ACL-SE.feature:189[39m[39m
+[35m   Step Definition: [90m_f5\testlib\Utils.js:1044[39m[39m
+[35m   Message:[39m
+[33m     [31mError: An element could not be located on the page using the given search parameters ("(//*[contains(.,"Alisha Dunn")])").[39m
+[33m         at World.<anonymous> (C:/ACM_QA/_f5/testlib/Utils.js:1061:22)[39m
+[35m[39m
+[35m3) Scenario: [1mVERIFY hasSubmittedSars ACL ATTRIBUTE[22m - [90m_f5\_ACM\ACL-SE.feature:193[39m[39m
+[35m   Step: [1mWhen I click on "S-Entity Case" button[22m - [90m_f5\_ACM\ACL-SE.feature:207[39m[39m
+[35m   Step Definition: [90m_f5\testlib\Utils.js:668[39m[39m
+[35m   Message:[39m
+[33m     [31mError: element not visible[39m
+[33m         at World.<anonymous> (C:/ACM_QA/_f5/testlib/Utils.js:679:11)[39m
+[35m[39m
+[35m4) Scenario: [1mCLEANUP[22m - [90m_f5\_ACM\ACL-SE.feature:227[39m[39m
+[35m   Step: [1mWhen I click on "S-Entity Case / S-Entity statistics / S-Entity ACM Severity"[22m - [90m_f5\_ACM\ACL-SE.feature:237[39m[39m
+[35m   Step Definition: [90m_f5\testlib\Utils.js:860[39m[39m
+[35m   Message:[39m
+[33m     [31mError: An element could not be located on the page using the given search parameters.[39m
+[33m         at World.<anonymous> (C:/ACM_QA/_f5/testlib/Utils.js:873:11)[39m
+[35m[39m
+[35m6 scenarios ([31m4 failed[39m, [32m2 passed[39m)[39m
+[35m181 steps ([31m4 failed[39m, [36m51 skipped[39m, [32m126 passed[39m)[39m
+[35m4m29.252s[39m
+[35m[39m
+
+C:\ACM_QA>cd chimp/node_modules/cucumber-html-reporter 
+
+C:\ACM_QA\chimp\node_modules\cucumber-html-reporter>node test1 
+Cucumber HTML report ..\..\..\_f5\output\fico_rep.html generated successfully.
+
+C:\ACM_QA\chimp\node_modules\cucumber-html-reporter>cd..
+
+C:\ACM_QA\chimp\node_modules>cd sendmail 
+
+C:\ACM_QA\chimp\node_modules\sendmail>node simple.js shashankrajput@fico.com ShashankRajput@fico.com 
+fico_rep.html
+null
+'221 Closing connection. Good bye.\r\n'
+Error: read ECONNRESET
+    at exports._errnoException (util.js:1022:11)
+    at TCP.onread (net.js:569:26)
+undefined

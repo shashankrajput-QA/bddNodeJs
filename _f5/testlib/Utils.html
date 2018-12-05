@@ -1,0 +1,228 @@
+<!DOCTYPE html><html><head><style>table,th,td{border: 1px solid black;border-collapse: collapse;}th{text-align: left;}th,td{padding:5px;}table#t01{width:100%;background-color:#f1f1c1;}table#t01 th{background-color: black;color: white;}</style></head><body style="background-color:maroon;"><table id="t01"><caption><font color="white" size="12"><b>NextGen Automation Help Doc</b></font></caption><tr><th>Test Step Line</th><th>Detail 1</th><th>Detail 2</th><th>Detail 3</th></tr><tr><td>---Launch URL</td>
+<td>[e.g.] Given I open url "http://google.com"</td>
+<td> To launch the URL</td>
+<td>I open url "_____"</td></tr>
+<tr><td>---Move to Popup Window</td>
+<td>[e.g.] I move focus to Popup Window</td>
+<td> Moving to the new window that pops up</td>
+<td>I move focus to Popup Window</td></tr>
+<tr><td>---Come back to Parent Window</td>
+<td>I come back to Parent Window</td></tr>
+<tr><td><B>############-TEXT FIELD-##########################</B></td></tr>
+<tr><td>---Filling Field</td>
+<td>I enter "_____" as "_____"</td></tr>
+<tr><td>---[OFFSHOOT]Filling Fields of [Another Section Same Field]</td>
+<td>I enter "_____""_____" as "_____"</td></tr>
+<tr><td>---Filling Fields of [Single Label Multiple Fields] e.g. Name(First/Last)</td>
+<td>I enter "_____" field"_____" as "_____"</td></tr>
+<tr><td>---[OFFSHOOT]Filling Fields of [Single Label Multiple Fields] [In Another section] e.g. Name(First/Last)</td>
+<td>I enter "_____""_____" field"_____" as "_____"</td></tr>
+<tr><td>---Filling Fields based on placeholder (hint)</td>
+<td>I enter placeholder "_____" as "_____"</td></tr>
+<tr><td>---Filling Fields based on button position (preceding)</td>
+<td>I enter "_____" preceding "_____" button</td></tr>
+<tr><td>---Filling Fields retrieving from File</td>
+<td>I enter extracted "_____" from file "_____" preceding "_____" button</td></tr>
+<tr><td>-ENTER VALUE in INPUT RETRIEVED from FILE</td>
+<td>I enter "_____" field"_____" from file "_____"</td></tr>
+<tr><td>---Enter text with ID</td>
+<td>I enter "_____" in textbox having id as "_____"</td></tr>
+<tr><td>---Clicking Textbox (to keep cursor inside)</td>
+<td>I click on Textbox "_____"</td></tr>
+<tr><td>---Clicking any INPUT item</td>
+<td>I click on "_____" input field"_____"</td></tr>
+<tr><td>---Clicking any SELECT item</td>
+<td>I click on "_____" combo field"_____"</td></tr>
+<tr><td>---Clicking Textbox (using placeholder)</td>
+<td>I click on Textbox having placeholder "_____"</td></tr>
+<tr><td><B>############-TEXT FIELD - VERIFY-##########################</B></td></tr>
+<tr><td>---Text field - Verify</td>
+<td>I verify from textbox "_____" as "_____"</td></tr>
+<tr><td>---[OFFSHOOT-VERIFY]Verify Fields of [Another Section Same Field]</td>
+<td>I verify from textbox "_____""_____" as "_____"</td></tr>
+<tr><td>---Verify Fields of [Single Label Multiple Fields]</td>
+<td>I verify from textbox "_____" field "_____" as "_____"</td></tr>
+<tr><td>---Text field - VERIFY text field does not have the value</td>
+<td>I verify from textbox "_____" does not have "_____"</td></tr>
+<tr><td>--Verifying value present in a property file against a hard-coded value</td>
+<td>I verify value "_____" to be equal to value from saved FileProp "_____"</td></tr>
+<tr><td><B>############-COMBO-##########################</B></td></tr>
+<tr><td>---Selecting Text from Combo</td>
+<td>I select from "_____" as "_____"</td></tr>
+<tr><td>---Selecting Combo [Another Section Same Field]</td>
+<td>I select from "_____""_____" as "_____"</td></tr>
+<tr><td>---Selecting Combo [Single Label Multiple Fields] e.g. DOB</td>
+<td>I select from "_____" field"_____" as "_____"</td></tr>
+<tr><td>---[OFFSHOOT]Selecting Combo [Single Label Multiple Fields] [Another Section] e.g. DOB (Principal2)</td>
+<td>I select from "_____""_____" field"_____" as "_____"</td></tr>
+<tr><td>---[COMBO ID]Select value from Combo using ID</td>
+<td>I select from dropdown having id "_____" as "_____"</td></tr>
+<tr><td>---Selecting Value from Combo (Sometimes, the TEXT would have special characters)</td>
+<td>I select from "_____" value as "_____"</td></tr>
+<tr><td><B>############-COMBO-VERIFY##########################</B></td></tr>
+<tr><td>---Verifying Combo Value - Simple</td>
+<td>I verify from combobox "_____" as "_____"</td></tr>
+<tr><td>---Verifying Combo Value - [Single Label Multiple Fields]</td>
+<td>I verify from combobox "_____" field "_____" as "_____"</td></tr>
+<tr><td>---Verify Fields of [Another Section Same Fields]</td>
+<td>I verify from combobox "_____""_____" as "_____"</td></tr>
+<tr><td>---Verify Fields of [Another Section Same Fields]</td>
+<td>I verify from combolist "_____""_____" as "_____"</td></tr>
+<tr><td><B>############-COMBO-EXISTS##########################</B></td></tr>
+<tr><td>---Verifying Combo Exists</td>
+<td>I verify dropdown "_____" exists</td></tr>
+<tr><td><B>############-RADIO BUTTON-##########################</B></td></tr>
+<tr><td>---Selecting value for Radio Group</td>
+<td>I select the radio button "_____" as "_____"</td></tr>
+<tr><td><B>############-CHECKBOX-##########################</B></td></tr>
+<tr><td>---Clicking checkbox with ID</td>
+<td>I click on checkbox having id as "_____"</td></tr>
+<tr><td>---CHECKBOX: Taking action on checkbox</td>
+<td>I "_____" the checkbox present "_____" the "_____"</td></tr>
+<tr><td>---CHECKBOX: Taking action on multiple checkbox with same label</td>
+<td>I "_____" the checkbox present "_____" the "_____""_____"</td></tr>
+<tr><td><B>############-BUTTON CLICKS-##########################</B></td></tr>
+<tr><td>---Clicking Button</td>
+<td>I click button "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence] Clicking Button of nth Occurrence</td>
+<td>I click button "_____" occurrence "_____"</td></tr>
+<tr><td>---Clicking Image Button [Mostly in DM]</td>
+<td>I click Image button "_____"</td></tr>
+<tr><td>---[OFFSHOOT]Clicking Image Button Occurrence [Mostly in DM]</td>
+<td>I click Image button "_____" occurrence "_____"</td></tr>
+<tr><td>---Clicking  nth occurrence Button with type not submit---Courtesy:Kriti, PNC</td>
+<td>I click on "_____" occurrence "_____"</td></tr>
+<tr><td>---Clicking button that has link - LOGIN button on home page</td>
+<td>I click on "_____" button</td></tr>
+<tr><td>---Clicking button with ID</td>
+<td>I click on button having id as "_____"</td></tr>
+<tr><td><B>############-BUTTON VERIFY-##########################</B></td></tr>
+<tr><td>---Verify BUTTON STATUS is enabled</td>
+<td>I verify button "_____" is enabled</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Verify BUTTON STATUS is enabled</td>
+<td>I verify button "_____" occurrence "_____" is enabled</td></tr>
+<tr><td>---Verify BUTTON STATUS is disabled</td>
+<td>I verify button "_____" is disabled</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Verify BUTTON STATUS is disabled</td>
+<td>I verify button "_____" occurrence "_____" is disabled</td></tr>
+<tr><td>---Verify BUTTON EXISTS</td>
+<td>I verify "_____" button exists</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Verify BUTTON EXISTS</td>
+<td>I verify "_____" button exists occurrence "_____"</td></tr>
+<tr><td><B>############-LINK-CLICK-##########################</B></td></tr>
+<tr><td>---Clicking Hyper Link</td>
+<td>I click on "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Clicking Hyper Link - thro OFFSET</td>
+<td>I click "_____" field"_____"</td></tr>
+<tr><td>---Clicking Hyper Link (nth Occurrence)</td>
+<td>I click on "_____" link occurrence "_____"</td></tr>
+<tr><td>---Move to Hyper Link</td>
+<td>I move to link "_____"</td></tr>
+<tr><td>---Move to Hyper Link (nth Occurrence)</td>
+<td>I move to link "_____" occurrence "_____"</td></tr>
+<tr><td>---Click in HYPERLINK following label</td>
+<td>I click on link following "_____" text</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Click in HYPERLINK following label</td>
+<td>I click on link following "_____" occurrence "_____" text</td></tr>
+<tr><td>-Click element that is before text</td>
+<td>I click element before the text "_____"</td></tr>
+<tr><td>-[OFFSHOOT-Occurrence]Click element that is after text</td>
+<td>I click element after the text "_____"</td></tr>
+<tr><td>---Click in ICON preceding label e.g. expand icon before Status</td>
+<td>I click on icon preceding "_____" text</td></tr>
+<tr><td>---Click in <BELL> ICON e.g. Bell, Folder</td>
+<td>I click on "_____" icon</td></tr>
+<tr><td>---Click in HYPERLINK following ICON e.g. Calendar Date icon</td>
+<td>I click on link following "_____" icon</td></tr>
+<tr><td>---Click in a <value> inside a field.  e.g. Date that shows calendar and user clicks a date in it.</td>
+<td>I click "_____" in "_____" field</td></tr>
+<tr><td><B>############-PAGE-VERIFY-##########################</B></td></tr>
+<tr><td>---Verify Page Title</td>
+<td>I verify the page title "_____"</td></tr>
+<td>I wait until "_____" appears</td></tr>
+<tr><td>---Verify Page Text</td>
+<td>I verify the page text to contain "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence] Verify Page Text ON OCCURRENCE</td>
+<td>I verify the page text to contain "_____" occurrence "_____"</td></tr>
+<tr><td>---Verify Page Text not contains</td>
+<td>I verify the page text to not contain "_____"</td></tr>
+<tr><td>---Verify value of field on the page (not a TextBox)</td>
+<td>I verify value "_____" for label "_____"</td></tr>
+<tr><td>---Verify value of field NOT TO BE on the page (not a TextBox)</td>
+<td>I verify value "_____" not found for label "_____"</td></tr>
+<tr><td>---Extract value of field on the page (not a TextBox) to Save</td>
+<td>I extract value for label "_____" and save to "_____"</td></tr>
+<tr><td>---Verifying text in a page section</td>
+<td>In section "_____" I verify existence of text "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Verifying text in a page section occurrence</td>
+<td>In section "_____" I verify existence of text "_____" occurrence "_____"</td></tr>
+<tr><td>---Extract value from an Textbox and SAVE to File :udhay</td>
+<td>[e.g.] from Name text box and save to "1.txt/prop1"</td>
+<td>I extract from textbox "_____" and save to "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence] Extract value from an Textbox and SAVE to File:  OCCURRENCE</td>
+<td>[e.g.] from Name[2] text box and save to "1.txt/prop1"</td>
+<td>I extract from textbox "_____" occurrence "_____" and save to "_____"</td></tr>
+<tr><td>---Extract value between LB and RB and SAVE to File</td>
+<td>[e.g.] getCount of Roles created LB: "SYSTEM(" and ")"</td>
+<td>I extract the text between "_____" and "_____" and save to "_____"</td></tr>
+<tr><td>---[OFFSHOOT-Occurrence]Extract value between LB and RB and SAVE to File with OCCURRENCE</td>
+<td>I extract the text between "_____""_____" and "_____" and save to "_____"</td></tr>
+<tr><td>---Verify text between LB and RB (that follows a text) to a value (that follows a TEXT)</td>
+<td>[e.g.] getCount of Auditor: "Number of permissions: 2"</td>
+<td>I verify for "_____" the text between "_____" and "_____" to be "_____"</td></tr>
+<tr><td>---Extract value between LB and RB and SAVE to File (that follows a TEXT)</td>
+<td>[e.g.] getCount of "Number of permissions: 2"</td>
+<td>I extract for "_____" the text between "_____" and "_____" and save to "_____"</td></tr>
+<tr><td><B>############-EXTRACT AND VERIFY-##########################</B></td></tr>
+<tr><td>--Extract and Verify</td>
+<td>I extract "_____" from file "_____" and verify as "_____"</td></tr>
+<tr><td>---Verify Page Title Contains</td>
+<td>I enter extracted "_____" from file "_____" and verify the page title contains the same</td></tr>
+<tr><td>--Verifying text in a page section with extracted property from a file</td>
+<td>in section "_____" I verify existence of extracted text "_____"</td></tr>
+<tr><td><B>############-FILE EXTRACTS ALONE AND VERIFY-##########################</B></td></tr>
+<tr><td>--File Extract and Verify</td>
+<td>I verify "_____" of "_____" and "_____" to be "_____"</td></tr>
+<tr><td><B>############-PAGE-EXTRACT-##########################</B></td></tr>
+<tr><td>--Extracting value before a pattern and SAVING to file</td>
+<td>I extract "_____" before the pattern "_____" and save to "_____"</td></tr>
+<tr><td>--Extracting value after a pattern (with occurrence) and SAVING to file</td>
+<td>I extract text after the pattern "_____" occurrence "_____" and save to file "_____"</td></tr>
+<tr><td><B>############-MISCELLANEOUS-##########################</B></td></tr>
+<tr><td>--Delete Cookies</td>
+<td>I delete Cookies</td></tr>
+<tr><td>--Just a casual wait</td>
+<td>Browser Ending Actions</td></tr>
+<tr><td>--Explicit sleep from Feature file author</td>
+<td>I wait for "_____"</td></tr>
+<tr><td>--Moving the focus to new iFRAME</td>
+<td>Set the focus on new frame</td></tr>
+<tr><td>--Scroll to a 'Y' position----</td>
+<td>Scroll the window to "_____"</td></tr>
+<tr><td>--Scroll to a Web element----</td>
+<td>Scroll the window to field "_____"</td></tr>
+<tr><td>--Print Screenshot----</td>
+<td>I take screenshot to file "_____"</td></tr>
+<tr><td>--Upload a File and ATTACHMENTS----</td>
+<td>I upload file "_____" to "_____"</td></tr>
+<tr><td>--Download a File and ATTACHMENT----</td>
+<td>I download file "_____" to "_____"</td></tr>
+<tr><td>--Passing a Key e.g. ENTER, BACKSPACE----</td>
+<td>I key press "_____"</td></tr>
+<tr><td>--Getting a count of collection (of XPATH output) and save to file</td>
+<td>I get count of "_____" and save to "_____"</td></tr>
+<tr><td><B>############-MULTILINE TEXT-##########################</B></td></tr>
+<tr><td>--Filling Multiline Text-----//</td>
+<td>I enter multiline text in "_____" as "_____"</td></tr>
+<tr><td>--[OFFSHOOT-Occurrence]  Filling Multiline Text-----//</td>
+<td>I enter multiline text in "_____" occurrence of "_____" as "_____"</td></tr>
+<tr><td>--TO VERIFY Multiline TEXTAREA item exists-----//</td>
+<td>I verify multiline text "_____" exists</td></tr>
+<tr><td>--[OFFSHOOT-Occurrence]TO VERIFY Multiline TEXTAREA item exists-----//</td>
+<td>I verify multiline text "_____" occurrence "_____" exists</td></tr>
+<tr><td><B>############-ALERT-##########################</B></td></tr>
+<tr><td>--Accept alert</td>
+<td>I accept following alert</td></tr>
+<tr><td>--Dismiss alert</td>
+<td>I dismiss following alert</td></tr>
+</body></html>

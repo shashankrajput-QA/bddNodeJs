@@ -1,0 +1,56 @@
+======LOGIN DATA========
+url=http://10.105.39.211/acm
+Login=bddtest
+Password=password
+Login1=bddtest1
+Password1=password
+Login2=bddtest2
+Password2=password
+loginTime=90000
+keyCloakurl=http://10.105.39.48:9090/auth/
+keyLogin=demo
+keyPassword=demo
+
+=======QUEUES==========
+IN_PROGRESS_QUEUE=S-Entities
+SE_ALERT_PARKED_QUEUE=S-Entities
+
+=======CASE DATA=======
+
+profile_CASE_GENERAL=Margaret Kane
+profile_CASE_GENERAL_CUST_ID=8
+profile_CASE_DCSN=Patrick Walker
+
+=======ALERT DATA=========
+##GENERAL
+profile_ALERT_1=Karen Mayer
+profile_ALERT_DCSN=Patrick Walker
+
+##ADD_ALERT_TO_CASE
+profile_CASE_INVOLVED_PERSON=Brett Camacho
+add_entity_customer_first_name=Brett
+case_without_alert_template=Fraud
+case_without_alert_assignee=Super Users
+
+##ALERT_LINK
+profile_LINK_ALERT2= Steven Marshall
+profile_LINK_ALERT3=Rick O'neal
+
+=======DELAYS============
+delay_LOW=2000
+delay_MED=5000
+delay_HIGH=7000
+
+
+======GENERAL DATA========
+createCase_OWNER=John Smith
+alrt_STATUS_ALRT_TASK=Open
+profile_ALRT_STATE=In progress:
+case_without_alert_owner=John Smith
+profile_CASE_NO=caseReference
+profile_CASE_TITLE=Sample Investigation Title
+lockExpiryTime=120000
+lockNotificationTime=60000
+profile_EMAIL_TO=shashankrajput@fico.com
+SARTemplate=SAR Approval Template
+riskTemplate=Manual Risk Approval Template

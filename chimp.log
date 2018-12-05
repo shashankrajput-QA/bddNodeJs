@@ -1,0 +1,25 @@
+
+C:\ACM_QA>REM node chimp/dist/bin/chimp.js _f5/runtime/run.feature 
+
+C:\ACM_QA>if "chrome" == "firefox" (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_test --browser="firefox" --port=4444 --host="localhost" )  else if "chrome" == "ie" (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_test --browser="internet explorer" --port=4444 --host="localhost" )  else (node chimp/dist/bin/chimp.js C:\ACM_QA\_f5\_test ) 
+[32m
+Master Chimp and become a testing Ninja! Check out our course: [39m[4m[34mhttp://bit.ly/2btQaFu
+[39m[24m
+[33m
+[chimp] Running...[39m
+
+C:\ACM_QA>cd chimp/node_modules/cucumber-html-reporter 
+
+C:\ACM_QA\chimp\node_modules\cucumber-html-reporter>node test1 
+Cucumber HTML report ..\..\..\_f5\output\fico_rep.html generated successfully.
+
+C:\ACM_QA\chimp\node_modules\cucumber-html-reporter>cd..
+
+C:\ACM_QA\chimp\node_modules>cd sendmail 
+
+C:\ACM_QA\chimp\node_modules\sendmail>node simple.js asdfsadf ShashankRajput@fico.com 
+fico_rep.html
+Error: queryMx ESERVFAIL null
+    at errnoException (dns.js:28:10)
+    at QueryReqWrap.onresolve [as oncomplete] (dns.js:216:19)
+undefined
